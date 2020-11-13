@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="8dp"
+                    android:id="@+id/user_detail_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="26dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/user_default" />
+
+                <TextView
+                    android:id="@+id/user_detail_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center|top"
+                    android:text="用户未登录"
+                    android:textColor="#fff"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="0.35"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/user_detail_following"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_weight="1"
+                        android:text="关注"
+                        android:textColor="#ddd" />
+                    <TextView
+                        android:id="@+id/user_detail_following_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.55"
+                        android:text="00"
+                        android:textColor="#ddd" />
+
+                    <FrameLayout
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#bddd"></FrameLayout>
+
+                    <TextView
+                        android:id="@+id/user_detail_follower"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="粉丝"
+                        android:textColor="#ddd" />
+                    <TextView
+                        android:id="@+id/user_detail_follower_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.55"
+                        android:text="00"
+
+                        android:textColor="#ddd" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"></FrameLayout>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+        </LinearLayout>
+    </FrameLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/user_detail_tab_layout"
+        app:tabMode="fixed"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@android:color/white"
+        app:tabIndicatorColor="?attr/colorPrimary"
+        app:tabIndicatorHeight="3dp"
+        android:elevation="6dp"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/user_detail_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+
+</LinearLayout>
